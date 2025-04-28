@@ -21,4 +21,5 @@ artifacts:
     - README.md
   discard-paths: yes
   base-directory: src
-  destination: your-s3-bucket-name/your-folder-name/
+  destination: experiment-aws-codebuild-bucket/
+  # destination: your-s3-bucket-name/your-folder-name/
