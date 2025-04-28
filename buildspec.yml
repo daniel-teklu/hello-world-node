@@ -12,7 +12,7 @@ phases:
 artifacts:
   files:
     - "**/*" # Include all files in the build output
-  base-directory: build # Replace "build" with the directory containing your build output
+  base-directory: hello-world-node-dist # Replace "build" with the directory containing your build output
   discard-paths: no
   # destination: experiment-aws-codebuild-bucket/
   # destination: your-s3-bucket-name/your-folder-name/
