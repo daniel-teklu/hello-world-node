@@ -2,24 +2,17 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 14
     commands:
+      - echo Installing dependencies...
       - npm install
   build:
     commands:
+      - echo Building the application...
       - npm run build
-  post_build:
-    commands:
-      - echo "Build completed successfully"
-      - node src/index.js
-
 artifacts:
   files:
-    - src/index.js
-    - package.json
-    - README.md
-  discard-paths: yes
-  base-directory: src
-  destination: experiment-aws-codebuild-bucket/
+    - "**/*" # Include all files in the build output
+  base-directory: build # Replace with your build output directory
+  discard-paths: no
+  # destination: experiment-aws-codebuild-bucket/
   # destination: your-s3-bucket-name/your-folder-name/
